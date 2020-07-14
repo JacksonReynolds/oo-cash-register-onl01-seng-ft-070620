@@ -22,7 +22,7 @@ class CashRegister
   end #apply_discount
 
   def void_last_transaction
-    self.total -= self.last_item[:qty].times {self.last_item[:price]}
+    self.last_item[:qty].times {self.toal - self.last_item[:price]}
   end #void_last_transaction
 
 end #CashRegister
