@@ -22,6 +22,7 @@ class CashRegister
   end #apply_discount
 
   def void_last_transaction
+    self.items.pop
     self.last_item[:qty].times {self.total -= self.last_item[:price]}
   end #void_last_transaction
 
