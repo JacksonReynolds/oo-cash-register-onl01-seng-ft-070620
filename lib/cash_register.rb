@@ -1,8 +1,8 @@
 require 'pry'
 
-  attr_reader :total, :discount
-
 class CashRegister
+
+  attr_reader :total, :discount
 
   def initialize(discount = 0)
     @discount =  1 - discount.to_f/100
