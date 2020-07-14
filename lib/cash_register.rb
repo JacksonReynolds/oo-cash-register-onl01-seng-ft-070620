@@ -15,7 +15,7 @@ class CashRegister
 
   def apply_discount
     @total = (1-@discount.to_f/100)*@total
-    "After the discount, the total is $#{@total}." if discount != 0
+    discount != 0 ? "After the discount, the total coems to $#{@total}." : "There is no discount to apply."
   end #apply_discount
 
 end #CashRegister
