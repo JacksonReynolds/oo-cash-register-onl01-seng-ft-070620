@@ -5,7 +5,7 @@ class CashRegister
   attr_reader :total, :discount
 
   def initialize(discount = 0)
-    @discount =  1 - discount.to_f/100
+    @discount =  discount
     @total = 0
   end #initialize
 
@@ -14,7 +14,7 @@ class CashRegister
   end #add_item
 
   def apply_discount
-    @total = @discount*@total
+    @total = (1-@discount.to_f/100)*@total
     "some message"
   end #apply_discount
 
